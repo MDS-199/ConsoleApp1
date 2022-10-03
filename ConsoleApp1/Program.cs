@@ -15,7 +15,7 @@ internal class Program
                 {int A = 1; Console.Write("\n");
                     while (A < 10)
                     {
-                        Console.Write($" {A}*{Q}={Q*A}");
+                        Console.Write($" {A}*{Q}={Q*A}\t");
                         ++A;
                     }
                 } 
