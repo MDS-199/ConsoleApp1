@@ -6,22 +6,24 @@ internal class Program
     private static void Main(string[] args)
     {
 
-        {
-            Console.WriteLine("Вывести таблицу умножения на экран ?");
-            string OTVET = Console.ReadLine();
-            if (OTVET.ToLower().Contains("да"))
+        {   
+            bool ItWorking = true;
+            Console.WriteLine("Введите 2 числа от 0 до 10: ");
+            while (ItWorking)
             {
-                for (int Q = 1; Q < 10; Q++)
-                {int A = 1; Console.Write("\n");
-                    while (A < 10)
+                int A = Convert.ToInt32(Console.ReadLine());
+                int B = Convert.ToInt32(Console.ReadLine());
+                if (A < 10 & A > 0 & B > 0 & B < 10)
+                {
+                    Console.WriteLine($"{A}*{B}={A * B}");
+                    break;
+                }
+                else
                     {
-                        Console.Write($" {A}*{Q}={Q*A}\t");
-                        ++A;
+                    Console.WriteLine("Введены недопустимые значения");
+                    Console.WriteLine("Введите 2 числа от 0 до 10: ");
                     }
-                } 
-            }
-
-            else Console.WriteLine("Ну нет так нет");
-        }
+            }       
+        }       
     }
 }
